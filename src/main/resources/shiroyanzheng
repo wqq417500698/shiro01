@@ -1,0 +1,16 @@
+[main]
+#当没有认证跳到登录页面
+authc.loginUrl=/Login
+roles.unauthorizedUrl=/unauthorized.jsp
+perms.unauthorizedUrl=/unanthorized.jsp 
+[users]
+zhangsan=123456,teacher
+wangwu=11111,student
+[roles]
+teacher=add
+student=find
+[urls]
+#请求login不需要身份认证
+/Login=anon
+#请求admin需要身份认证
+/Admin=authc 
